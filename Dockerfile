@@ -1,3 +1,13 @@
-FROM ubuntu/apache2:2.4-22.04_beta
+FROM node:19-alpine
 
-COPY website/index.html /var/www/html/
+WORKDIR /app
+
+COPY ./website/package.json .
+
+RUN npm install
+
+COPY ./website .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
