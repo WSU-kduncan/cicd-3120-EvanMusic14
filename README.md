@@ -16,8 +16,8 @@
 - Building a container from the Dockerfile
     - Command: `sudo docker build -t reactapp:version .`
 - Running the container
-    - Command: `sudo docker run -d --name react -p 3000:3000 reactapp:version`
+    - Command: `sudo docker run -d --name react -p 80:3000 reactapp:version`
 - View the running project
     - Open a web browser
-    - On the same system as the container navigate to `localhost:3000`
-    - On a different system as the container navigate to `ipaddress:3000`
+    - On the same system as the container navigate to `localhost` or `localhost:80`
+    - On a different system as the container navigate to the `ipaddress` of the system or `ipaddress:80`
