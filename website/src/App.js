@@ -10,7 +10,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
-          Testing redeploy #2
+          Testing redeploy #3
         </p>
         <a
           className="App-link"

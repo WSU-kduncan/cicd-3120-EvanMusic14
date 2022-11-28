@@ -51,5 +51,15 @@
 
 ## Deployment
 
-
-
+- Container restart script
+    - Pulls the latest docker image
+    - Stops the running container
+    - Removes the stopped container
+    - Runs a new container using the new docker image
+- Setting up a webhook on the server
+    - Install webhook
+        - `sudo apt-get install webhook`
+    - Create a `hooks.json` file
+        - In here you will add your hooks with the execute command for the script you want to run in our case the restart script
+    - Run `webhook -hooks /my/path/to/hooks/hooks.json -verbose`
+        - This will start your hook listener 
