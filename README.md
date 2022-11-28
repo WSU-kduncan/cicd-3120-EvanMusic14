@@ -63,3 +63,11 @@
         - In here you will add your hooks with the execute command for the script you want to run in our case the restart script
     - Run `webhook -hooks /my/path/to/hooks/hooks.json -verbose`
         - This will start your hook listener 
+    - Create a startup script that runs the webhook
+        - Allows the webhook to stay running and start when the system start
+- Setup a notifier in DockerHub
+    - Go to your repository
+    - Go to webhooks
+    - Add a new webhook
+        - `http://ipAddress:9000/hooks/id`
+
