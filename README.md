@@ -71,3 +71,7 @@
     - Add a new webhook
         - `http://ipAddress:9000/hooks/id`
 
+## Diagramming
+
+![Screenshot](./images/workflow.png)
+
