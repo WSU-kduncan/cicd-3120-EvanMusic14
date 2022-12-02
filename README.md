@@ -56,6 +56,14 @@
     - Stops the running container
     - Removes the stopped container
     - Runs a new container using the new docker image
+    - ```
+        #!/bin/bash
+
+        sudo docker pull evanmusic14/reactapp:latest
+        sudo docker stop REACT_APP
+        sudo docker system prune -f
+        sudo docker run -d --name=REACT_APP -p 80:3000 evanmusic14/reactapp:latest
+        ```
 - Setting up a webhook on the server
     - Install webhook
         - `sudo apt-get install webhook`
@@ -65,6 +73,17 @@
         - This will start your hook listener 
     - Create a startup script that runs the webhook
         - Allows the webhook to stay running and start when the system start
+- Webhook task definition file
+    - ```
+        [
+            {
+                "id": "redeploy",
+                "execute-command": "/home/ubuntu/redeploy.sh",
+                "command-working-directory": "/home/ubuntu",
+                "response-message": "Redeploying  server."
+            }
+        ]
+        ```
 - Setup a notifier in DockerHub
     - Go to your repository
     - Go to webhooks
